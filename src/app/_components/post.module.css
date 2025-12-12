@@ -65,8 +65,14 @@
   margin-bottom: 8px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 8px;
   line-height: 1.4;
+  font-weight: 200;
+}
+
+.commentText {
+    margin-left: 1rem;
 }
 
 .commentLikeButton {

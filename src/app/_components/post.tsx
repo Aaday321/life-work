@@ -2,14 +2,21 @@
 
 import { useState } from "react";
 import styles from "./post.module.css";
+import Comment from "./Comment";
 
 interface SocialMediaPostProps {
   color?: string;
 }
 
+const comments = [
+  "Wow! That beach looks so nice! And I cannot wait to join!",
+  "LeBron James was at that beach!",
+  "OMG! I am a third comment",
+]
+
 export function SocialMediaPost({color}:SocialMediaPostProps) {
   const [liked, setLiked] = useState(false)
-  const [commentLiked, setCommentLiked] = useState(false)
+  const [showMore, setShowMore] = useState(false)
 
   return (
     <>
@@ -64,27 +71,15 @@ export function SocialMediaPost({color}:SocialMediaPostProps) {
           Living the "LifeWork" Dream! #Cruisetime
         </div>
 
-        <div className={styles.comment}>
-          <span>Wow! That beach looks so nice!</span>
-          <button
-            className={`${styles.commentLikeButton} ${commentLiked ? styles.liked : ""}`}
-            onClick={() => setCommentLiked(!commentLiked)}
-            aria-label="Like comment"
-          >
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill={commentLiked ? "currentColor" : "none"}
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-            </svg>
-          </button>
-        </div>
-
-        <div className={styles.reply}>Reply</div>
+        {
+          comments.map(
+            text=>
+            <Comment key={comments.indexOf(text)} commentText={text}/>
+          )
+        }
+        <button onClick={()=>setShowMore(c=>!c)}>
+          Show {!showMore ? "more" : "less"}
+        </button>
       </div>
     </>
   );
