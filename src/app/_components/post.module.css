@@ -1,0 +1,102 @@
+
+.userInfo {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  padding: 0 4px;
+}
+
+.imageContainer {
+  width: 100%;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+.imageContainer img {
+  width: 70%;
+  border-radius: 12px;
+  display: block;
+}
+
+
+.engagementSection {
+  padding: 0 4px;
+  margin-bottom: 24px;
+}
+
+.engagementIcons {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.iconButton {
+  background: none;
+  border: none;
+  color: #32cd32;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+
+.iconButton:hover {
+  transform: scale(1.1);
+}
+
+.iconButton.liked {
+  color: #32cd32;
+}
+
+.caption {
+  color: white;
+  font-size: 14px;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.comment {
+  color: white;
+  font-size: 14px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1.4;
+}
+
+.commentLikeButton {
+  background: none;
+  border: none;
+  color: #32cd32;
+  cursor: pointer;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+
+.commentLikeButton:hover {
+  transform: scale(1.1);
+}
+
+.commentLikeButton.liked {
+  color: #32cd32;
+}
+
+.reply {
+  color: #aaa;
+  font-size: 12px;
+  margin-top: 4px;
+  cursor: pointer;
+}
+
+.reply:hover {
+  color: #ccc;
+}
+
